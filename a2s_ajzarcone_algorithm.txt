@@ -1,0 +1,31 @@
+OPS435 Section A: Assignment 2
+
+Name: Agostino Zarcone
+Student ID: ajzarcone
+Student Number: 105665186
+
+This assignment was completed on Seneca Matrix.
+The purpose of my script is to create fully functioning Fabric tasks. The tasks will be:
+addUser(name) to create a new user on the remote system,
+findUser(name) to determine if the user being searched is currently existing on the system,
+listUser to list all shell users on the system,
+listSysUser to list all system users on the system.
+
+For the addUser task, I used the useradd command combined with the name that the user would enter
+when running the task and added sudo because it is a change to the system and cannot run without it.
+
+For the listUser task, I used a combination of commands bonded together by pipes. First, I used the
+getent command to get entries of every user with a password. Next, I use grep to search /bin/bash
+for user logins. The last part is using cut to set the delimeter for the search, and cutting out the
+first field by using the f1 option. The first field of our previous search contains the user names.
+
+For the listSysUser task, I used the same format as the listUser task. The only change I had to make
+was using grep to search for "nologin" because the system users do not have logins such as the 
+regular users. The purpose of my "for" statement is to properly set the output by making the output
+into a list and add the content into the results.
+
+For the findUser task, I used a similar format to the previous tasks. The getent command would remain
+the same, however I am using the cut command before my grep search so that no names would be excluded.
+After the cut, I would then use grep in combination with the name the user has entered to find a name
+in the list of users on the system. I end the task with an "if" statement which will inform the user
+if the user has been found on the system or not.

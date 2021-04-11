@@ -1,0 +1,60 @@
+[myvmlab.senecacollege.ca] Executing task 'addUser'
+[myvmlab.senecacollege.ca] sudo: useradd ops435
+[myvmlab.senecacollege.ca] out: sudo password: 
+
+[myvmlab.senecacollege.ca] out: useradd: user 'ops435' already exists
+[myvmlab.senecacollege.ca] out: 
+
+Disconnecting from myvmlab.senecacollege.ca:7709... done.
+[myvmlab.senecacollege.ca] Executing task 'listUser'
+[myvmlab.senecacollege.ca] run: getent passwd | grep "/bin/bash" | cut -d: -f1
+[myvmlab.senecacollege.ca] out: root
+[myvmlab.senecacollege.ca] out: itsadmin
+[myvmlab.senecacollege.ca] out: student
+[myvmlab.senecacollege.ca] out: instructor
+[myvmlab.senecacollege.ca] out: ops435
+[myvmlab.senecacollege.ca] out: 
+
+['root', 'itsadmin', 'student', 'instructor', 'ops435']
+
+Done.
+Disconnecting from myvmlab.senecacollege.ca:7709... done.
+[myvmlab.senecacollege.ca] Executing task 'listSysUser'
+[myvmlab.senecacollege.ca] run: getent passwd | grep "nologin" | cut -d: -f1
+[myvmlab.senecacollege.ca] out: bin
+[myvmlab.senecacollege.ca] out: daemon
+[myvmlab.senecacollege.ca] out: adm
+[myvmlab.senecacollege.ca] out: lp
+[myvmlab.senecacollege.ca] out: mail
+[myvmlab.senecacollege.ca] out: operator
+[myvmlab.senecacollege.ca] out: games
+[myvmlab.senecacollege.ca] out: ftp
+[myvmlab.senecacollege.ca] out: nobody
+[myvmlab.senecacollege.ca] out: systemd-network
+[myvmlab.senecacollege.ca] out: dbus
+[myvmlab.senecacollege.ca] out: polkitd
+[myvmlab.senecacollege.ca] out: sshd
+[myvmlab.senecacollege.ca] out: postfix
+[myvmlab.senecacollege.ca] out: chrony
+[myvmlab.senecacollege.ca] out: ntp
+[myvmlab.senecacollege.ca] out: 
+
+['bin', 'daemon', 'adm', 'lp', 'mail', 'operator', 'games', 'ftp', 'nobody', 'systemd-network', 'dbus', 'polkitd', 'sshd', 'postfix', 'chrony', 'ntp']
+
+Done.
+Disconnecting from myvmlab.senecacollege.ca:7709... done.
+[myvmlab.senecacollege.ca] Executing task 'findUser'
+[myvmlab.senecacollege.ca] run: getent passwd | cut -d: -f1 | grep ops435
+[myvmlab.senecacollege.ca] out: ops435
+[myvmlab.senecacollege.ca] out: 
+
+Found user ops435 on the system.
+
+Done.
+Disconnecting from myvmlab.senecacollege.ca:7709... done.
+[myvmlab.senecacollege.ca] Executing task 'findUser'
+[myvmlab.senecacollege.ca] run: getent passwd | cut -d: -f1 | grep ajzarcone
+User ajzarcone is not on the system.
+
+Done.
+Disconnecting from myvmlab.senecacollege.ca:7709... done.
